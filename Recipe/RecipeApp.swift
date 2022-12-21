@@ -1,5 +1,5 @@
 //
-//  RecipeApp.swift
+//  Recipe.swift
 //  Recipe
 //
 //  Created by Benji Loya on 14/12/2022.
