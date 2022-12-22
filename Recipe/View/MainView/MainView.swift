@@ -12,15 +12,25 @@ struct MainView: View {
 //        MARK: TabView with recent post's and profile tabs
         
         TabView{
-            Text("Recent Post's")
+            HomeView()
                 .tabItem{
-                    Image(systemName: "rectangle.portrait.on.rectangle.portrait.angled")
-                    Text("Post's")
+                    Label("Home", systemImage: "house")
+                }
+            CategoriesView()
+                .tabItem{
+                    Label("Categories", systemImage: "square.fill.text.grid.1x2")
+                }
+            NewRecipeView()
+                .tabItem{
+                    Label("New", systemImage: "plus")
+                }
+            FavoritesView()
+                .tabItem{
+                    Label("Favorites", systemImage: "heart")
                 }
             ProfileView()
                 .tabItem{
-                    Image(systemName: "gear")
-                    Text("Profile")
+                    Label("Settings", systemImage: "gear")
                 }
         }
 //        Canging Tab Lable Tint To Black
@@ -30,6 +40,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+//        ContentView()
+        MainView()
     }
 }
